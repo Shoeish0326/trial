@@ -13,7 +13,7 @@ public class ItemGenerator : MonoBehaviour
     {
         _startPtInfo = GameObject.Find("Start").transform;
         _goalInfo = GameObject.Find("Goal").transform;
-        _popPoint = new Vector3(_goalInfo.position.x, _goalInfo.position.y, _startPtInfo.position.z);
+        _popPoint = new Vector3(_goalInfo.position.x, _goalInfo.position.y+5, _startPtInfo.position.z);
         for (int i = 1; i < (_goalInfo.position.z - _startPtInfo.position.z) / _generateSpan; i++)
         {
             _popPoint.z += _generateSpan;
